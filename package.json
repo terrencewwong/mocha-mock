@@ -1,0 +1,39 @@
+{
+  "name": "mocha-mock",
+  "version": "0.0.1",
+  "description": "mock library for mocha",
+  "main": "lib/index.js",
+  "repository": "https://github.com/wongterrencew/mocha-mock.git",
+  "author": "Terrence Wong <wongterrencew@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm run test:lib",
+    "test:lib": "NODE_ENV=test mocha \"lib/**/*.spec.js\" --recursive --colors",
+    "test:lib:watch": "NODE_ENV=test mocha \"lib/**/*.spec.js\" --recursive --colors --watch",
+    "lint": "standard --verbose | snazzy",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm t && npm run lint",
+      "commit-msg": "validate-commit-msg"
+    }
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "mocha": "^3.2.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "ghooks": "^2.0.0",
+    "semantic-release": "^6.3.2",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0",
+    "validate-commit-msg": "^2.11.1"
+  }
+}
