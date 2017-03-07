@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "mocha": "^3.2.0"
+    "deep-equal": "^1.0.1"
   },
   "devDependencies": {
     "expect": "^1.20.2",
@@ -34,6 +34,10 @@
     "semantic-release": "^6.3.2",
     "snazzy": "^6.0.0",
     "standard": "^8.6.0",
-    "validate-commit-msg": "^2.11.1"
+    "validate-commit-msg": "^2.11.1",
+    "mocha": "^3.2.0"
+  },
+  "peerDependencies": {
+    "mocha": "^3.2.0"
   }
 }
